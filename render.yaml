@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: MPT-backend-live
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: 5003
+      - key: MONGO_URI
+        value: mongodb+srv://silasude811:081Silas%40@ac-04kqnti-shard-00-00.e8hkjy9.mongodb.net/?retryWrites=true&w=majority&appName=MPT001
+      - key: JWT_SECRET
+        value: MPT_SecreT@12345!VeryStrongKey
